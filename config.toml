@@ -1,78 +1,78 @@
-baseURL = "https://siddhantmaharana.github.io/"
-title = "Sid M"
-theme = "manis"
-math = true
-
-
-# Copyright notice. Note: You can use HTML tag here
-copyright = "&copy; 2018 Siddhant Maharana"
-pluralizeListTitles = false
-
-# Minimum number of posts before paginate navigation show up
-paginate = 10
-
-# Your disqus shortname
-disqusShortname = ""
-
-# Edit this if you want to translate your blog
-defaultContentLanguage = "en"
-
-# Code Highlighting (Chroma)
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
-[taxonomies]
-	tag = "tags"
+baseURL                          = "/"  # Your domain name. Must end with "/"
+theme                            = "introduction"
+DefaultContentLanguage           = "en"                    # Default language for multilingual sites
+# disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
+# googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
 
 [params]
-	# If false, use minified CSS (ui.min.css)
-	debugCSS = false
-	# Custom CSS
-	customCSS = []
-	
-	# List of sections support disqus comments
-	disqusSections = [ "blog" ]
-	# Site meta description
-	description = "Siddhant Maharana personal  blog."
-	# Site's Tagline (Subtitle or Keyword)
-	tagline = ""
-	# If true give attribution to this theme
-	themeAttrib = false
-	# URL to license file, can be outside of your domain
-	licenseURL = "/about/license"
+    themeStyle                   = "light"                 # Choose "light" or "dark"
+    favicon                      = "/img/fav.ico"          # Path to favicon file
+    showRSSButton                = false                   # Show rss button in navigation
+    fadeIn                       = true                    # Turn on/off the fade-in effect
+    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
+    dateFormat                   = "Jan 2, 2006"
+    email                        = "siddhantmaharana14@gmail.com"   # E-mail address for contact section
+    # customCSS                    = ["foo.css"]             # Include custom css files placed under assets/
 
-	# Configure which section for Latest Posts
-	postSection = "blog"
-	# Configure which section for Latest Works
-	# workSection = "code"
+    # Configure the home page
+    [params.home]
+        introHeight              = "medium"                 # Input either "medium" or "large" or "fullheight"
+        showLatest               = true                    # Show latest blog post summary
+        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
+        numberOfProjectsToShow   = 6                   # Maximum number of projects to show on home page. Unset or comment out to show all projects
 
-	# 404 Configuration
-	head404 = "Sorry, I can't find what you want."
-	sub404 = "Back to <a href='/'>Home</a>."
+        localTime                = true                    # Show your current local time in contact section
+        timeZone                 = "America/Kentucky/Louisville"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    [params.projects]
+        useTwoColumns            = false                   # Use a layout with two columns instead of three
 
-	# Color of your website's accent
-	colorTheme = "#3A539B"
-	# Maximum number of item in Latest Posts or Works
-	latestCount = 5
-	# Path to site's favicon image
-	faviconImg = ""
-	# Date format in item list
-	dateFmt = "Jan 02, 2006"
+    # Share buttons on blog post pages
+    [params.share]
+        twitter                  = true
+        facebook                 = true
+        googlePlus               = true
+        pinterest                = true
 
-	# Code Highlighting (HighlightJS)
-	highlightJs = false
-	highlightJsLanguages = [ "go" ]
-	highlightJsStyle = "ocean"
+    # Social icons appear in introduction and contact section. Add as many more as you like.
+    # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+    # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+    [[params.social]]
+        url   = "https://twitter.com/nowplayingsid"
+        icon  = "twitter" # icon name without the 'fa-'
+        icon_pack = "fab"
 
-	# Social Links
-	email = "siddhantmaharana14@gmail.com"
-	github = "https://github.com/siddhantmaharana/"
-	twitter = "https://twitter.com/nowplayingsid"
-	linkedin = "https://linkedin.com/in/siddhantmaharana"
+    [[params.social]]
+        url   = "https://www.linkedin.com/in/siddhantmaharana/"
+        icon  = "linkedin-in" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url = "mailto:siddhantmaharana14@gmail.com"  # For a direct email link, use "mailto:test@example.org".
+        icon = "paper-plane" # icon name without the 'fa-'
+        icon_pack = "fas"
 
 
-# Language Configuration
-#[languages.in]
-#	lang = "in"
-#	languageName = "English"
-#	weight = 1
+# If you don't want to use the default menu, you can define one by yourself
+# [[menu.main]]
+#     name    = "Home"
+#     url     = "/"
+#     weight  = 0
+# [[menu.main]]
+#     name    = "Blog"
+#     url     = "/blog/"
+#     weight  = 1
+
+# We only use tag as a taxonomies
+# You can add more by yourself
+[taxonomies]
+  tag = "tags"
+
+[languages]
+    [languages.en]
+        languageName     = "English"
+        languageCode     = "en-us"
+        contentDir       = "content/en"
+        weight           = 0
+        title            = "Siddhant Maharana"
+        [languages.en.params]
+            description  = "Personal Blog of Siddhant Maharana"   # Max 160 characters show in search results
+            # footerText   = "Copyright Reserved"                      # Text to override default footer text (markdown allowed)
